@@ -1,11 +1,11 @@
 # multiple vulnerabilities in libjpeg-version 9a
 
-There are multiple vulnerabilities in libjpeg-version 9a (git repository:https://github.com/LuaDist/libjpeg, Latest commit 6c0fcb8  on Nov 2, 2015).
+There are multiple vulnerabilities in libjpeg-version 9a( git repository:https://github.com/LuaDist/libjpeg, Latest commit 6c0fcb8  on Nov 2, 2015).
 
 # Floating point exception (jmemmgr.c:407)
 When testcase of  **[libjpeg-v9a/Floating point exception/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Floating%20point%20exception)jmemmgr.c:407-***  was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to Floating point exception.
 
-The problem seems like that an incorrect operation to float happened to line 407 of **jmemmgr.c** :
+The problem seems like that an incorrect operation to float happened in line 407 of **jmemmgr.c** :
 
 *ltemp = (MAX_ALLOC_CHUNK-SIZEOF(large_pool_hdr)) / ((long) samplesperrow * SIZEOF(JSAMPLE));*  
 
@@ -73,7 +73,7 @@ GDB provided information as below:
         sinfo=0x628000008118) at rdppm.c:153
     #1  0x00000000004eb1bd in main (argc=2, argv=0x7fffffffe438) at cjpeg.c:642
 
-Same problem happened in 
+Same problems happened in 
 
 rdppm.c:171. (testcase: **[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:171-*** ), 
 
