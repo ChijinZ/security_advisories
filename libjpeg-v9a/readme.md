@@ -1,6 +1,6 @@
 # multiple vulnerabilities in libjpeg-version 9a
 
-There are multiple vulnerabilities in libjpeg-version 9a( git repository:https://github.com/LuaDist/libjpeg, Latest commit 6c0fcb8  on Nov 2, 2015).
+There are multiple vulnerabilities in libjpeg-version 9a (git repository:https://github.com/LuaDist/libjpeg, Latest commit 6c0fcb8  on Nov 2, 2015).
 
 # Floating point exception (jmemmgr.c:407)
 When testcase of  **[libjpeg-v9a/Floating point exception/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Floating%20point%20exception)jmemmgr.c:407-***  was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to Floating point exception.
