@@ -40,7 +40,7 @@ GDB provided information as below:
     #2  0x00000000004eaf09 in main (argc=2, argv=0x7fffffffe428) at cjpeg.c:626
 
 # Segmentation fault (rdppm.c:153,171,172,173)
-When testcase of **Segmentation fault** was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to segmentation fault.
+When testcase of **[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:153-*** was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to segmentation fault.
 
 The problem seems like that ***ptr** attempted to access a restricted area of memory in line 153 of **rdppm.c** :
 
@@ -73,4 +73,10 @@ GDB provided information as below:
         sinfo=0x628000008118) at rdppm.c:153
     #1  0x00000000004eb1bd in main (argc=2, argv=0x7fffffffe438) at cjpeg.c:642
 
-Same problem happened in rdppm.c:171. (testcase:), rdppm.c:172. (testcase:), rdppm.c:173. (testcase:).
+Same problem happened in 
+
+rdppm.c:171. (testcase: **[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:171-*** ), 
+
+rdppm.c:172. (testcase:**[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:172-*** ), 
+
+rdppm.c:173. (testcase:**[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:173-*** ).
