@@ -8,7 +8,7 @@ git log:
     Author: chrisc36 <chrisc@allenai.org>
     Date:   Mon Apr 9 09:53:30 2018 -0700
 
-When testcase (see: ) was input into **pdffigures** (command: *pdffigures -f testfile* ), a **SEGV** signal was triggered.
+When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/pdffigures/crash.pdf) was input into **pdffigures** (command: *pdffigures -f testfile* ), a **SEGV** signal was triggered.
 
 It seems that the unordered_map *fontNameCounts* has no element when the input pdf is blank page. And the variable is used to access its first element in TextUtils.cpp:157:
 
