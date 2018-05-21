@@ -50,6 +50,9 @@ When the testcase (see: https://github.com/ChijinZ/security_advisories/blob/mast
 
 It seems that it try to access a memory out of array *data* .
 
+    if (i + 3 < data_size && data[i] == 0xFF && data[i+`1] == 0xD8 &&
+                data[i+2] == 0xFF && data[i+3] == 0xE0)`
+
 AddressSanitizer provided information as below:
 
     ==5926==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000000b6 at pc 0x000000528b63 bp 0x7ffeb9450530 sp 0x7ffeb9450528
