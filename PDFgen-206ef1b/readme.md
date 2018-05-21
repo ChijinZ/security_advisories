@@ -48,7 +48,7 @@ And compile it as follow:
 
 When the testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/PDFgen-206ef1b/crash.jpg) was input (command: ./testpdf testfile), a crash was trigger.
 
-It seems that it try to access a memory out of array *data* .
+It seems that it try to access a memory out of array *data* in pdfgen.c:2015.
 
     if (i + 3 < data_size && data[i] == 0xFF && data[i+`1] == 0xD8 &&
                 data[i+2] == 0xFF && data[i+3] == 0xE0)`
