@@ -6,11 +6,11 @@ git log
     Author: Evan Miller <emmiller@gmail.com>
     Date:   Tue May 8 07:23:27 2018 -0400
 
-I modify the src/fuzz/Makefile (see: ) so that I can generate libfuzzer-style entries to src/spss/readstat_sav_read.c and src/sas/readstat_sas7bcat_read.c
+I modify the src/fuzz/Makefile (see: https://github.com/ChijinZ/security_advisories/blob/master/ReadStat-7bced5b/Makefile) so that I can generate libfuzzer-style entries to src/spss/readstat_sav_read.c and src/sas/readstat_sas7bcat_read.c
 
 ## Memory Leaks
 
-When the testcase (see: ) was input, a crash was triggered in ReadStat/src/spss/readstat_sav_read.c:894:
+When the testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/ReadStat-7bced5b/crash-sav-read) was input, a crash was triggered in ReadStat/src/spss/readstat_sav_read.c:894:
 
     iconv_t converter = iconv_open(dst_charset, src_charset);
 
@@ -60,7 +60,7 @@ LeakSanitizer provided imformation as below:
 
 ##  Infinite Loop
 
-The testcase caused an infinite loop in src/sas/readstat_sas7bcat_read.c: 288 to 309:
+The testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/ReadStat-7bced5b/crash-sas7bcat) caused an infinite loop in src/sas/readstat_sas7bcat_read.c: 288 to 309:
 
     while (next_page > 0 && next_page_pos > 0) {
         if (io->seek(ctx->header_size+(next_page-1)*ctx->page_size+next_page_pos, READSTAT_SEEK_SET, io->io_ctx) == -1) {
