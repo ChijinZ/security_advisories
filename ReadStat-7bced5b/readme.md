@@ -2,6 +2,7 @@
 We discovered multiple vulnerabilities in ReadStat (git repository:https://github.com/WizardMac/ReadStat, Latest commit 7bced5b on May 8, 2018).
 
 git log
+
     commit 7bced5b279486b92f362d97aa671241e787a809a
     Author: Evan Miller <emmiller@gmail.com>
     Date:   Tue May 8 07:23:27 2018 -0400
