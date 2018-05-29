@@ -11,7 +11,7 @@ git log:
 
 command: ./md2html testfile
 
-testcase: 
+testcase: https://github.com/ChijinZ/security_advisories/blob/master/md4c-387bd02/crash_md_is_link_reference_definition_helper
 
 AddressSanitizer provided information as below:
 
@@ -81,7 +81,7 @@ AddressSanitizer provided information as below:
 
 command: ./md2html testfile
 
-testcase: 
+testcase: https://github.com/ChijinZ/security_advisories/blob/master/md4c-387bd02/crash_md_is_named_entity_contents
 
 AddressSanitizer provided information as below:
 
@@ -151,7 +151,7 @@ AddressSanitizer provided information as below:
 
 command: ./md2html testfile
 
-testcase: 
+testcase: https://github.com/ChijinZ/security_advisories/blob/master/md4c-387bd02/crash_md_merge_lines
 
 AddressSanitizer provided information as below:
 
