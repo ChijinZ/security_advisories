@@ -1,4 +1,4 @@
-# a vulnerability in md4c
+<!-- # a vulnerability in md4c
 
 git log 
 
@@ -8,4 +8,4 @@ git log
 
 
 
-fixed in https://github.com/mity/md4c/commit/0d1a41a4d25d57e41b19f8c6abbabbf4d40d09ae
+fixed in https://github.com/mity/md4c/commit/0d1a41a4d25d57e41b19f8c6abbabbf4d40d09ae -->
