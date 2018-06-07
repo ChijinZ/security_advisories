@@ -8,7 +8,7 @@ git log
     Author: Syoyo Fujita <syoyo@lighttransport.com>
     Date:   Sun May 27 01:01:10 2018 +0900
 
-I build tinyexr with clang and address sanitizer. When testcase (see: ) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
+I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_7953aea/heap-buffer-overflow) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
 
 Address sanitizer provided information as below: 
 
