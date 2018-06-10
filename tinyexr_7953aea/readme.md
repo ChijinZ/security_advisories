@@ -1,5 +1,5 @@
 # A vulnerability in tinyexr
-There is a vulnerability in tinyexr (git repository: https://github.com/syoyo/tinyexr, Latest commit 7953aea).
+There is a vulnerability in tinyexr (git repository: https://github.com/syoyo/tinyexr, Latest commit 7953aea on May 27, 2018).
 
 git log 
 
