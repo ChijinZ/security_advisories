@@ -15,14 +15,14 @@ Address sanitizer provided information as below:
 
     ==25897==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a00000b35d at pc 0x00000058117b bp 0x7ffe8c41dd10 sp 0x7ffe8c41dd08
     READ of size 1 at 0x62a00000b35d thread T0
-        #0 0x58117a in tinyexr::DecodePixelData(unsigned char**, int const*, unsigned char const*, unsigned long, int, int, int, int, int, int, int, int, unsigned long, unsigned long, _EXRAttribute const*, unsigned long, _EXRChannelInfo const*, std::vector<unsigned long, std::allocator<unsigned long> > const&) /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:8848:7
-        #1 0x564765 in tinyexr::DecodeChunk(_EXRImage*, _EXRHeader const*, std::vector<unsigned long, std::allocator<unsigned long> > const&, unsigned char const*, unsigned long) /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:10699:20
-        #2 0x544fd4 in LoadEXRImageFromMemory /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:10891:10
-        #3 0x539a8a in LoadEXRImageFromFile /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:11260:10
-        #4 0x535134 in LoadEXR /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:10941:15
-        #5 0x5684f5 in main /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/test_tinyexr.cc:130:13
+        #0 0x58117a in tinyexr::DecodePixelData(unsigned char**, int const*, unsigned char const*, unsigned long, int, int, int, int, int, int, int, int, unsigned long, unsigned long, _EXRAttribute const*, unsigned long, _EXRChannelInfo const*, std::vector<unsigned long, std::allocator<unsigned long> > const&) /path/to/tinyexr/./tinyexr.h:8848:7
+        #1 0x564765 in tinyexr::DecodeChunk(_EXRImage*, _EXRHeader const*, std::vector<unsigned long, std::allocator<unsigned long> > const&, unsigned char const*, unsigned long) /path/to/tinyexr/./tinyexr.h:10699:20
+        #2 0x544fd4 in LoadEXRImageFromMemory /path/to/tinyexr/./tinyexr.h:10891:10
+        #3 0x539a8a in LoadEXRImageFromFile /path/to/tinyexr/./tinyexr.h:11260:10
+        #4 0x535134 in LoadEXR /path/to/tinyexr/./tinyexr.h:10941:15
+        #5 0x5684f5 in main /path/to/tinyexr/test_tinyexr.cc:130:13
         #6 0x7f2ff6d6982f in __libc_start_main /build/glibc-Cl5G7W/glibc-2.23/csu/../csu/libc-start.c:291
-        #7 0x41b288 in _start (/home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/test_tinyexr+0x41b288)
+        #7 0x41b288 in _start (/path/to/tinyexr/test_tinyexr+0x41b288)
 
     0x62a00000b35d is located 0 bytes to the right of 20829-byte region [0x62a000006200,0x62a00000b35d)
     allocated by thread T0 here:
@@ -33,9 +33,9 @@ Address sanitizer provided information as below:
         #4 0x5399b3 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/bits/stl_vector.h:185
         #5 0x5399b3 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/bits/stl_vector.h:136
         #6 0x5399b3 in std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/bits/stl_vector.h:278
-        #7 0x5399b3 in LoadEXRImageFromFile /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:11251
+        #7 0x5399b3 in LoadEXRImageFromFile /path/to/tinyexr/./tinyexr.h:11251
 
-    SUMMARY: AddressSanitizer: heap-buffer-overflow /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:8848:7 in tinyexr::DecodePixelData(unsigned char**, int const*, unsigned char const*, unsigned long, int, int, int, int, int, int, int, int, unsigned long, unsigned long, _EXRAttribute const*, unsigned long, _EXRChannelInfo const*, std::vector<unsigned long, std::allocator<unsigned long> > const&)
+    SUMMARY: AddressSanitizer: heap-buffer-overflow /path/to/tinyexr/./tinyexr.h:8848:7 in tinyexr::DecodePixelData(unsigned char**, int const*, unsigned char const*, unsigned long, int, int, int, int, int, int, int, int, unsigned long, unsigned long, _EXRAttribute const*, unsigned long, _EXRChannelInfo const*, std::vector<unsigned long, std::allocator<unsigned long> > const&)
     Shadow bytes around the buggy address:
     0x0c547fff9610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
     0x0c547fff9620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -80,7 +80,7 @@ Leak sanitizer provided information as below:
 
     Direct leak of 30 byte(s) in 1 object(s) allocated from:
         #0 0x441968 in strdup /home/ubuntu/llvm/llvm-6.0.0.src/projects/compiler-rt/lib/asan/asan_interceptors.cc:407
-        #1 0x53a6a7 in ParseEXRHeaderFromMemory /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:11101:16
-        #2 0x5392cd in ParseEXRHeaderFromFile /home/ubuntu/fuzz/tinyexr/tinyexr_6fd0c1f/./tinyexr.h:12375:10
+        #1 0x53a6a7 in ParseEXRHeaderFromMemory /path/to/tinyexr/./tinyexr.h:11101:16
+        #2 0x5392cd in ParseEXRHeaderFromFile /path/to/tinyexr/./tinyexr.h:12375:10
 
     SUMMARY: AddressSanitizer: 30 byte(s) leaked in 1 allocation(s)
