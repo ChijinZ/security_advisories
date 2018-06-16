@@ -71,7 +71,7 @@ I build tinyexr with clang and address sanitizer. When testcase (see: https://gi
 
 ## Assert failure
 
-When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_b53a457/assert_b53a457) is input into test_tinyexr (command: ./test_tinyexr testcase), a assert-failure problem is triggered in tinyexr.h:10195.
+When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_b53a457/assert_10195) is input into test_tinyexr (command: ./test_tinyexr testcase), a assert-failure problem is triggered in tinyexr.h:10195.
 
     test_tinyexr: ./tinyexr.h:10195: void tinyexr::ComputeChannelLayout(std::vector<size_t> *, int *, size_t *, int, const EXRChannelInfo *): Assertion `0' failed.
     Aborted
