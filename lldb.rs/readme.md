@@ -1,8 +1,8 @@
 # Invalid Address Accsss in lldb.rs
 
-There is a vulnerability in lldb.rs (git repository: https://github.com/mity/md4c, commit 28c3e86 on July 9, 2018).
+There is a vulnerability in lldb.rs (git repository: https://github.com/endoli/lldb.rs, commit 28c3e86 on July 9, 2018).
 
-When I use main.rs (see: ) as driver to call lldb.rs libaray to checkout coredump file, it raises a *SIGSEGV* signal.
+When I use main.rs (see: https://github.com/ChijinZ/security_advisories/blob/master/lldb.rs/main.rs) as driver to call lldb.rs libaray to checkout coredump file, it raises a *SIGSEGV* signal.
 
 lldb provide information as bellow: 
 
