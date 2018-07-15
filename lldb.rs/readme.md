@@ -12,4 +12,4 @@ lldb provide information as bellow:
         frame #1: 0x000055555556b859 crash_analyse`std::ffi::c_str::CStr::from_ptr::h7d6778659191997d at c_str.rs:904
         frame #2: 0x000055555555ed45 crash_analyse`lldb::frame::SBFrame::function_name::h6e8217ef78893c79(self=0x00007fffffffe848) at frame.rs:153
 
-I pulled request to the repository and the author have already merge the request to the master brach.( see: https://github.com/endoli/lldb.rs/commit/10873dcab6e8d2478f2164f47b552cae3c796cdf).
+It raises error because the pointer is used without any checker. If the pointer is NULL, it triggers the *SIGSEGV* signal. I pulled request to the repository and the author have already merge the request to the master brach.( see: https://github.com/endoli/lldb.rs/commit/10873dcab6e8d2478f2164f47b552cae3c796cdf).
