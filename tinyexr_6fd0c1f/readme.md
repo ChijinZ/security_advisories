@@ -7,7 +7,7 @@ git log
     Author: Syoyo Fujita <syoyo@lighttransport.com>
     Date:   Thu Jun 7 13:53:40 2018 +0900
 
-## Heap Buffer overflow
+## Heap Buffer overflow (**CVE-2018-12092**)
 
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_6fd0c1f/heap-buffer-overflow) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
 
@@ -70,7 +70,7 @@ Address sanitizer provided information as below:
     ==25897==ABORTING
     Load EXR err: Failed to parse channel info.(code -4)
 
-## Memory Leak
+## Memory Leak (**CVE-2018-12093**)
 
 I build tinyexr with clang and leak sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_6fd0c1f/memory_leak) is input into test_tinyexr (command: ./test_tinyexr testcase), sanitizer detected memory leaks in *ParseEXRHeaderFromMemory*.
 

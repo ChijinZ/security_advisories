@@ -2,7 +2,7 @@
 
 We discovered multiple vulnerabilities in libjpeg-version 9a (git repository:https://github.com/LuaDist/libjpeg, Latest commit 6c0fcb8  on Nov 2, 2015).
 
-## Floating point exception (jmemmgr.c:407)
+## Floating point exception (jmemmgr.c:407) (**CVE-2018-11212**)
 When testcase of  **[libjpeg-v9a/Floating point exception/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Floating%20point%20exception)jmemmgr.c:407-***  was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to Floating point exception.
 
 The problem seems like that an incorrect operation to float happened in line 407 of **jmemmgr.c** :
@@ -39,7 +39,7 @@ GDB provided information as below:
         sinfo=0x629000005218) at rdtarga.c:437
     #2  0x00000000004eaf09 in main (argc=2, argv=0x7fffffffe428) at cjpeg.c:626
 
-## Segmentation fault (rdppm.c:153,171,172,173)
+## Segmentation fault (rdppm.c:153,171,172,173)(**CVE-2018-11213, CVE-2018-11214**)
 When testcase of **[libjpeg-v9a/Segmentation fault/](https://github.com/ChijinZ/security_advisories/tree/master/libjpeg-v9a/Segmentation%20fault)rdppm.c:153-*** was input into **cjpeg** (command: *cjpeg testfile* ), a crash was triggered due to segmentation fault.
 
 The problem seems like that ***ptr** attempted to access a restricted area of memory in line 153 of **rdppm.c** :

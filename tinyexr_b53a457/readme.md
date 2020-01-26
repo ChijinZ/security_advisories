@@ -8,7 +8,7 @@ git log
     Author: Syoyo Fujita <syoyo@lighttransport.com>
     Date:   Wed Jun 13 19:12:22 2018 +0900
 
-## Heap Buffer overflow in LoadEXRImageFromMemory
+## Heap Buffer overflow in LoadEXRImageFromMemory (**CVE-2018-12503**)
 
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_b53a457/heap-buffer-overflow) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
 
@@ -69,7 +69,7 @@ I build tinyexr with clang and address sanitizer. When testcase (see: https://gi
     Right alloca redzone:    cb
     ==17583==ABORTING
 
-## Assert failure
+## Assert failure (**CVE-2018-12504**)
 
 When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_b53a457/assert_10195) is input into test_tinyexr (command: ./test_tinyexr testcase), a assert-failure problem is triggered in tinyexr.h:10195.
 

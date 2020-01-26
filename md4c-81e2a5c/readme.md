@@ -7,7 +7,7 @@ git log
     Author: Martin Mitas <mity@morous.org>
     Date:   Thu Apr 12 17:03:37 2018 +0200
 
-## Heap buffer overflow in md_split_simple_pairing_mark()
+## Heap buffer overflow in md_split_simple_pairing_mark() (**CVE-2018-11536**)
 
 command: ./md2html testfile
 

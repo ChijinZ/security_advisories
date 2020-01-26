@@ -7,7 +7,7 @@ git log
     Author: Syoyo Fujita <syoyo@lighttransport.com>
     Date:   Sat Jun 16 20:59:37 2018 +0900
 
-## segmentation fault
+## segmentation fault (**CVE-2018-12688**)
 
 I build tinyexr with gcc. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_16aba30/segmentation_fault) is input into test_tinyexr (command: ./test_tinyexr testcase), a segmentation fault is triggered. GDB provides information as follow:
 
@@ -21,7 +21,7 @@ I build tinyexr with gcc. When testcase (see: https://github.com/ChijinZ/securit
     #7  0x00000000004170d0 in LoadEXR ()
     #8  0x000000000041f2e1 in main ()
 
-## Assert failure
+## Assert failure (**CVE-2018-12687**)
 When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_16aba30/assert_failure) is input into test_tinyexr (command: ./test_tinyexr testcase), a assert-failure problem is triggered in tinyexr.h:9589.
 
     test_tinyexr: tinyexr.h:9589: bool tinyexr::DecodePixelData(unsigned char**, const int*, const unsigned char*, size_t, int, int, int, int, int, int, int, int, size_t, size_t, const EXRAttribute*, size_t, const EXRChannelInfo*, const std::vector<long unsigned int>&): Assertion `ret' failed.

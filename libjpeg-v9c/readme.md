@@ -1,4 +1,4 @@
-# A vulnerability in libjpeg-v9c
+# A vulnerability in libjpeg-v9c (**CVE-2018-11813**)
 
 When https://github.com/ChijinZ/security_advisories/blob/master/libjpeg-v9c/large_loop is input into cjpeg
 (command: .lib/cjpeg large_loop > out), it takes a long time (~6 min) to finish the compression and output a 21979501 bytes output file while the input file is 6142 bytes.
@@ -36,4 +36,8 @@ perf report provided information as follow:
     1.62%  cjpeg    [kernel.kallsyms]  [k] rw_verify_area                       ▒
     1.61%  cjpeg    [kernel.kallsyms]  [k] pagecache_get_page
 
-I have got in touch with JPEG group. They have verified it is a vulnerability and will fixed in the next version (jpeg-v9d). (see: https://github.com/ChijinZ/security_advisories/blob/master/libjpeg-v9c/mail.pdf)
+I have got in touch with JPEG group. They have verified it is a vulnerability and will fixed in the next version (jpeg-v9d). (see: https://github.com/ChijinZ/security_advisories/blob/master/libjpeg-v9c/mail.pdf).
+
+Update:
+Official acknowledgement along with jpeg-v9d:
+![official acknowledgement](./acknowledge.png)

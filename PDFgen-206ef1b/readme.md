@@ -1,4 +1,4 @@
-# a vulnerability in PDFgen
+# a vulnerability in PDFgen (**CVE-2018-11363**)
 There is a vulnerability in pdffigures (git repository: https://github.com/AndreRenaud/PDFGen, 206ef1b  on Apr 4, 2018).
 
 git log

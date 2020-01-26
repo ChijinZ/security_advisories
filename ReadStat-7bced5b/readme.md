@@ -1,4 +1,4 @@
-# Multiple vulnerabilities in ReadStat-7bced5b
+# Multiple vulnerabilities in ReadStat-7bced5b (**CVE-2018-11364**)
 We discovered multiple vulnerabilities in ReadStat (git repository:https://github.com/WizardMac/ReadStat, Latest commit 7bced5b on May 8, 2018).
 
 git log

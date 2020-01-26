@@ -1,4 +1,4 @@
-# A vulnerability in tinyexr
+# A vulnerability in tinyexr (**CVE-2018-12064**)
 There is a vulnerability in tinyexr (git repository: https://github.com/syoyo/tinyexr, Latest commit 7953aea on May 27, 2018).
 
 git log 

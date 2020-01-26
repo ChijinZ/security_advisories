@@ -7,7 +7,7 @@ git log:
     Author: Martin Mitas <mity@morous.org>
     Date:   Mon May 28 23:09:09 2018 +0200
 
-## Heap buffer overflow in md_is_link_reference_definition_helper()
+## Heap buffer overflow in md_is_link_reference_definition_helper() (**CVE-2018-11547**)
 
 command: ./md2html testfile
 
@@ -77,7 +77,7 @@ AddressSanitizer provided information as below:
     Right alloca redzone:    cb
     ==7016==ABORTING
 
-## Heap buffer overflow in md_is_named_entity_contents()
+## Heap buffer overflow in md_is_named_entity_contents() (**CVE-2018-11546**)
 
 command: ./md2html testfile
 
@@ -147,7 +147,7 @@ AddressSanitizer provided information as below:
     Right alloca redzone:    cb
     ==16545==ABORTING
 
-## Heap buffer overflow in md_merge_lines()
+## Heap buffer overflow in md_merge_lines() (**CVE-2018-11545**)
 
 command: ./md2html testfile
 
