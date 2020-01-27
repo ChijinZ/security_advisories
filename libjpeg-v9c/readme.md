@@ -39,5 +39,5 @@ perf report provided information as follow:
 I have got in touch with JPEG group. They have verified it is a vulnerability and will fixed in the next version (jpeg-v9d). (see: https://github.com/ChijinZ/security_advisories/blob/master/libjpeg-v9c/mail.pdf).
 
 Update:
-Official acknowledgement along with jpeg-v9d:
+Official acknowledgement along with jpeg-v9d (see: [link](https://jpegclub.org/reference/reference-sources/) ):
 ![official acknowledgement](./acknowledge.png)
