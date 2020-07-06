@@ -17,9 +17,9 @@ When a malicious testcase is input into test driver, the program exits by SEGV s
     ==18512==ABORTING
 
 
-[test driver]()
+[test driver](https://github.com/ChijinZ/security_advisories/blob/master/libconfig-f53e5de/driver.c)
 
-[attack vector]()
+[attack vector](https://github.com/ChijinZ/security_advisories/blob/master/libconfig-f53e5de/undefined-behavior-libconfig.c:1178)
 
 # Undefined behavior in __config_name_compare (libconfig.c:134)
 There is a undefined-behavior vulnerability in libconfig (git repository: https://github.com/hyperrealm/libconfig, Latest commit f53e5de on Dec 20, 2019).
@@ -41,6 +41,6 @@ When a malicious testcase is input into test driver, the program exits by SEGV s
     UndefinedBehaviorSanitizer can not provide additional info.
     ==18518==ABORTING
 
-[test driver]()
+[test driver](https://github.com/ChijinZ/security_advisories/blob/master/libconfig-f53e5de/driver.c)
 
-[attack vector]()
+[attack vector](https://github.com/ChijinZ/security_advisories/blob/master/libconfig-f53e5de/undefined-behavior-libconfig.c:134)
