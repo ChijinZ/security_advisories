@@ -1,6 +1,6 @@
 # Assert failure in ucl_msgpack_insert_object (ucl_msgpack.c:845)
 
-There is a undefined-behavior vulnerability in libucl (git repository: https://github.com/vstakhov/libucl, Latest commit 230f197 on Jul 1, 2020).
+git repository: https://github.com/vstakhov/libucl, Latest commit 230f197 on Jul 1, 2020.
 
 When a malicious testcase is input into test driver, the program exits due to assert failure. gdb message as bellow:
 
