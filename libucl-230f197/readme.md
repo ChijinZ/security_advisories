@@ -19,6 +19,6 @@ When a malicious testcase is input into test driver, the program exits due to as
     #9  0x000000000051c3ce in ExecuteFilesOnyByOne (argc=2, argv=0x7fffffffdcc8) at afl/afl_driver.cpp:265
     #10 0x000000000051cd18 in main (argc=2, argv=0x7fffffffdcc8) at afl/afl_driver.cpp:302
 
-[test driver]()
+[test driver](https://github.com/ChijinZ/security_advisories/blob/master/libucl-230f197/ucl_msgpack_fuzzer.c)
 
-[attack vector]()
+[attack vector](https://github.com/ChijinZ/security_advisories/blob/master/libucl-230f197/assertion-failure)
