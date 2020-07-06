@@ -1,0 +1,20 @@
+// An examole configuration file that stores information about a store.
+
+// Basic store information:
+name = "Books, Movies & More";
+
+// Store inventory:
+inventory =
+{
+  books = ( { title  = "Treasure Island";
+              author = "Robert Louis Stevenson";
+              price  = 29.99;
+              qty    = 5; },
+            { title  = "Snow Crash";
+              author = "Neal Stephenson";
+              price  = 9.99;
+              qty    = 8; }
+          );
+
+  movies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             = { open = 11; close = 16; };
+};
