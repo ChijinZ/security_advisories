@@ -1,10 +1,23 @@
 # Overview
+## Kubernetes
+- To be disclosed
+
+## Go/archive/tar
+- panic in strconv.go:269
+
+## postgresSQL
+- Buffer overflow when continuously send SIGHUP to postgres
+
+## libjpeg-v9c
+- CVE-2018-11813 (with acknowledgement in official website)
+
+## libucl-230f197
+- Assertion Failure in ucl_msgpack.c:845
+
 ## libjpeg-v9a
 - CVE-2018-11212
 - CVE-2018-11213
 - CVE-2018-11214
-## libjpeg-v9c
-- CVE-2018-11813 (with acknowledgement in official website)
 ## md4c-81e2a5c
 - CVE-2018-11536
 - Heap buffer overflow in md_process_inlines()
@@ -38,3 +51,7 @@
 - Heap-buffer-overflow in function tinyexr::LoadEXRImageFromFile tinyexr.h:11593
 - Out-of-memory in function tinyexr::DecodeEXRImage tinyexr.h:11046
 - Out-of-range in function tinyexr::SaveEXR tinyexr.h:13107
+
+## libconfig-f53e5de
+- Undefined behavior in config_setting_set_string (libconfig.c:1178)
+- Undefined behavior in __config_name_compare (libconfig.c:134)
