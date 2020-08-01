@@ -4,7 +4,7 @@
 - CVE-2020-XXXX (to be disclosed)
 
 ## Go/archive/tar
-- panic in strconv.go:269
+- out-of-range panic in strconv.go:269
 
 ## postgresSQL
 - Buffer overflow when continuously send SIGHUP to postgres
