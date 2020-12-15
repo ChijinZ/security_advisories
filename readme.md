@@ -1,7 +1,7 @@
 # Overview
 ## Kubernetes
 - CVE-2020-8560 (to be disclosed)
-- CVE-2020-XXXX (to be disclosed)
+- CVE-2020-8556 (to be disclosed)
 
 ## Go/archive/tar
 - out-of-range panic in strconv.go:269
