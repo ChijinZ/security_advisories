@@ -7,7 +7,7 @@ git log
     Author: Syoyo Fujita <syoyo@lighttransport.com>
     Date:   Tue Jan 1 00:15:59 2019 +0900
 
-## Heap-buffer-overflow in function tinyexr::AllocateImage tinyexr.h:10302
+## CVE-2018-20652 Heap-buffer-overflow in function tinyexr::AllocateImage tinyexr.h:10302
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_65f9859/crashes/heap-buffer-overflow-in-tinyexr.h:10302) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
 
     ==27424==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000061f at pc 0x0000005bf456 bp 0x7ffe87d29050 sp 0x7ffe87d29048
@@ -63,7 +63,7 @@ I build tinyexr with clang and address sanitizer. When testcase (see: https://gi
     Shadow gap:              cc
     ==27424==ABORTING
 
-## Heap-buffer-overflow in function tinyexr::LoadEXRImageFromFile tinyexr.h:11593
+## (duplicated) CVE-2018-12503 Heap-buffer-overflow in function tinyexr::LoadEXRImageFromFile tinyexr.h:11593
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_65f9859/crashes/heap-buffer-overflow-in-tinyexr.h:11593) is input into test_tinyexr (command: ./test_tinyexr testcase), a heap-buffer-overflow has triggered.
 
     ==28354==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000000e70 at pc 0x0000005bd8c1 bp 0x7ffd350c33d0 sp 0x7ffd350c33c8
@@ -129,7 +129,7 @@ I build tinyexr with clang and address sanitizer. When testcase (see: https://gi
     Shadow gap:              cc
     ==28354==ABORTING
 
-## Out-of-memory in function tinyexr::DecodeEXRImage tinyexr.h:11046
+## CVE-2020-18430 Out-of-memory in function tinyexr::DecodeEXRImage tinyexr.h:11046
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_65f9859/crashes/out-of-memory-in-tinyexr.h:11046) is input into test_tinyexr (command: ./test_tinyexr testcase), a out-of-memory has triggered.
 
     ==28640==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x3f8000b80 bytes
@@ -151,7 +151,7 @@ I build tinyexr with clang and address sanitizer. When testcase (see: https://gi
     SUMMARY: AddressSanitizer: out-of-memory (/home/jin/Documents/cve/tinyexr/test_tinyexr+0x4f2bb2) in operator new(unsigned long)
     ==28640==ABORTING
 
-## Out-of-range in function tinyexr::SaveEXR tinyexr.h:13107
+## CVE-2020-18428 Out-of-range in function tinyexr::SaveEXR tinyexr.h:13107
 I build tinyexr with clang and address sanitizer. When testcase (see: https://github.com/ChijinZ/security_advisories/blob/master/tinyexr_65f9859/crashes/out-of-range-in-tinyexr.h:13107) is input into test_tinyexr (command: ./test_tinyexr testcase), a out-of-range has triggered.
 
     (gdb) bt

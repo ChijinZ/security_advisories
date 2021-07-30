@@ -1,7 +1,7 @@
 # Overview
 ## Kubernetes
-- CVE-2020-8560 (to be disclosed)
-- CVE-2020-8556 (to be disclosed)
+- CVE-2020-8560 (to be disclosed; $200 bounty)
+- CVE-2020-8556 (to be disclosed; $1000 bounty)
 
 ## Go/archive/tar
 - out-of-range panic in strconv.go:269
@@ -48,10 +48,10 @@
 ## miniz-2.0.8
 - Infinite loop in miniz_tester.cpp:652
 ## tinyexr_65f9859
-- Heap-buffer-overflow in function tinyexr::AllocateImage tinyexr.h:10302
-- Heap-buffer-overflow in function tinyexr::LoadEXRImageFromFile tinyexr.h:11593
-- Out-of-memory in function tinyexr::DecodeEXRImage tinyexr.h:11046
-- Out-of-range in function tinyexr::SaveEXR tinyexr.h:13107
+- CVE-2018-20652 (duplicated)
+- CVE-2018-12503 (duplicated)
+- CVE-2020-18430
+- CVE-2020-18428
 
 ## libconfig-f53e5de
 - Undefined behavior in config_setting_set_string (libconfig.c:1178)
