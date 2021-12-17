@@ -2,7 +2,7 @@
 
 report id: Bug 228258
 
-When the attachment html file is input to MiniBrowser, Asan reports the heap-use-after-free message. 
+When the [html file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.32.3/seeds/uaf-firstchild.html) is input to webkitgtk, Asan reports the heap-use-after-free message. 
 
 ```
 =================================================================
@@ -167,7 +167,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 
 report id: Bug 228883
 
-When the attachment html file is input to MiniBrowser, Asan reports the heap-use-after-free message. 
+When the [html file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.32.3/seeds/uaf-page.html) is input to webkitgtk, Asan reports the heap-use-after-free message. 
 
 ```
 ==98422==ERROR: AddressSanitizer: heap-use-after-free on address 0x6130001082d8 at pc 0x7f7f660c2b7e bp 0x7ffc3cd6a220 sp 0x7ffc3cd6a218
@@ -320,7 +320,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 
 Bug 229365
 
-When the attachment is opened by MiniBrowser, a SEGV is raised by Asan. 
+When the [html file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.32.3/seeds/incorrect_malloc.html) is opened by webkitgtk, a SEGV is raised by Asan. 
 
 ```
 =================================================================
