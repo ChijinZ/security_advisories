@@ -2,7 +2,7 @@
 
 report id: Bug 237187
 
-The [attached file]() cause a heap buffer overflow in setContentsLayer().
+The [attached file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.36.0/poc/buffer-overflow.html) cause a heap buffer overflow in setContentsLayer().
 
 ASan report:
 
@@ -160,11 +160,11 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 ==16712==ABORTING
 
 
-# heap-use-after-free in WebCore::TextureMapperLayer::setContentsLayer
+# heap-use-after-free in setContentsLayer(WebCore::TextureMapperPlatformLayer*)
 
 report id: Bug 237188
 
-The [attached file]() cause a heap use after free in setContentsLayer.
+The [attached file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.36.0/poc/use-after-free.html) cause a heap use after free in setContentsLayer.
 
 ASan report:
 
