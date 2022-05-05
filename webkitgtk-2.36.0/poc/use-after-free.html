@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+</style>
+<script>
+var runcount = {'jsfuzzer':0, 'eventhandler1':0, 'eventhandler2':0, 'eventhandler3':0, 'eventhandler4':0, 'eventhandler5':0}
+function freememory() {
+try { CollectGarbage(); } catch(err) { }
+}
+function GetVariable(fuzzervars, var_type) { if(fuzzervars[var_type]) { return fuzzervars[var_type]; } else { return null; }}
+function SetVariable(fuzzervars, var_name, var_type) { fuzzervars[var_type] = var_name; }
+function jsfuzzer() {
+var fuzzervars = {};
+SetVariable(fuzzervars, document, 'Document');
+try { /* newvar{var00017:Document} */ var var00017 = var00018.parseFromString("foo","1"); } catch(e) { }
+try { if (!var00017) { var00017 = GetVariable(fuzzervars, 'Document'); } else { SetVariable(fuzzervars, var00017, 'Document'); SetVariable(fuzzervars, var00017, 'Node;');  } } catch(e) { }
+try { /* newvar{var00041:DOMWindow} */ var var00041 = window; } catch(e) { }
+try { /* newvar{var00064:HTMLAudioElement} */ var var00064 = document.createElement("audio"); } catch(e) { }
+try { /* newvar{var00095:HTMLMediaElement} */ var var00095 = var00064; } catch(e) { }
+try { /* newvar{var00145:Location} */ var var00145 = var00041.location; } catch(e) { }
+try { /* newvar{var00193:SVGTextContentElement} */ var var00193 = var00194; } catch(e) { }
+try { if (!var00257) { var00257 = GetVariable(fuzzervars, 'RTCIceComponent'); } else { SetVariable(fuzzervars, var00257, 'RTCIceComponent');  } } catch(e) { }
+try { /* newvar{var00348:USVString} */ var var00348 = var00038.baseURI; } catch(e) { }
+try { /* newvar{var00360:Element} */ var var00360 = var00017.activeElement; } catch(e) { }
+try { if (!var00360) { var00360 = GetVariable(fuzzervars, 'Element'); } else { SetVariable(fuzzervars, var00360, 'Element'); SetVariable(fuzzervars, var00360, 'Node;');  } } catch(e) { }
+try { /* newvar{var00497:Element} */ var var00497 = var00127.elementFromPoint(0.14093363264138103,0.9983591600062104); } catch(e) { }
+try { if (!var00497) { var00497 = GetVariable(fuzzervars, 'Element'); } else { SetVariable(fuzzervars, var00497, 'Element'); SetVariable(fuzzervars, var00497, 'Node;');  } } catch(e) { }
+try { /* newvar{var00699:GLenum} */ var var00699 = var00166.TEXTURE_WRAP_T; } catch(e) { }
+try { /* newvar{var00873:WebGLRenderingContext} */ var var00873 = htmlvar00020.getContext("webgl"); } catch(e) { }
+try { if (!var00924) { var00924 = GetVariable(fuzzervars, 'unsigned'); } else { SetVariable(fuzzervars, var00924, 'unsigned');  } } catch(e) { }
+try { var00095.src = "data:audio/mp3;base64,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"; } catch(e) { }
+try { var00497.setAttribute("onbeforeunload", "eventhandler2()"); } catch(e) { }
+try { var00145.port = var00348; } catch(e) { }
+try { var00071.rows = "0,1"; } catch(e) { }
+try { var00873.frontFace(var00699); } catch(e) { }
+}
+function eventhandler1() {
+}
+function eventhandler2() {
+try { /* newvar{var00025:unsigned} */ var var00025 = var00026.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2; } catch(e) { }
+try { htmlvar00020.width = var00025; } catch(e) { }
+}
+function eventhandler3() {
+}
+function eventhandler4() {
+}
+function eventhandler5() {
+}
+</script>
+</head>
+<body onload=jsfuzzer()>
+<canvas id="htmlvar00020" dir="LTR" style="-webkit-margin-top-collapse: collapse; border-image-width: 0; -webkit-align-self: flex-start; caption-side: bottom; grid-area: 1" dir="auto" src="x" height="0" ontouchstart="eventhandler5()" axis="uRpx@BI+o_" charset="iso-8859-1" scheme="NIST" defer="defer">mR/@&gt;RZ(&amp;p[#</canvas>
+</body>
+</html>

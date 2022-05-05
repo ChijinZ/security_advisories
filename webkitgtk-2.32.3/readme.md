@@ -1,4 +1,4 @@
-# use-after-free in WebCore::ContainerNode::firstChild()
+# use-after-free in WebCore::ContainerNode::firstChild (CVE-2021-45482)
 
 report id: Bug 228258
 
@@ -163,7 +163,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 ==67206==ABORTING
 ```
 
-# heap-use-after-free in WebCore::Frame::page()
+# heap-use-after-free in WebCore::Frame::page() (CVE-2021-45483)
 
 report id: Bug 228883
 
@@ -316,7 +316,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 ==98422==ABORTING
 ```
 
-# Incorrect memory allocation in WebCore::ImageBufferCairoImageSurfaceBackend::create
+# Incorrect memory allocation in WebCore::ImageBufferCairoImageSurfaceBackend::create (CVE-2021-45481)
 
 Bug 229365
 
