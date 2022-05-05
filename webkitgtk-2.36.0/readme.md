@@ -4,6 +4,8 @@ report id: Bug 237187
 
 The [attached file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.36.0/poc/buffer-overflow.html) cause a heap buffer overflow in setContentsLayer().
 
+version: webkitgtk 2.36.0
+
 ASan report:
 
 ==16712==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61b0000d4ab8 at pc 0x7f79a33b83ff bp 0x7ffde8451be0 sp 0x7ffde8451bd8
@@ -165,6 +167,8 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 report id: Bug 237188
 
 The [attached file](https://github.com/ChijinZ/security_advisories/blob/master/webkitgtk-2.36.0/poc/use-after-free.html) cause a heap use after free in setContentsLayer.
+
+version: webkitgtk 2.36.0
 
 ASan report:
 
